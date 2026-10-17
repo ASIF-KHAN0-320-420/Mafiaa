@@ -1,23 +1,44 @@
-import sys
+import os, sys, glob, importlib.util
 
-try:
-    import SASA
-    # SASA ke andar jo function hai uska naam yahan lagao
-    SASA.main()
+# Jo .so file hai usko dhoond kar load karo
+so_file = None
+# 1. Pehle current python version ki file dhoondo
+ver = f"{sys.version_info.major}{sys.version_info.minor}"
+for f in glob.glob("SASA*.so"):
+    if ver in f:
+        so_file = f
+        break
+# 2. Agar version wali na mile to koi bhi SASA wali utha lo
+if not so_file:
+    files = glob.glob("SASA*.so")
+    if files:
+        so_file = files[0]
 
-except ModuleNotFoundError:
-    print("SASA module nahi mila! SASA.cpython-*.so file Mafia.py ke sath rakho")
+if not so_file:
+    print(f"[!] SASA.cpython-*.so file nahi mili!")
+    print(f"Folder me ye files hain: {os.listdir('.')}")
     sys.exit()
 
-except AttributeError:
-    # Agar SASA.main() nahi hai to ye try hoga
-    try:
+print(f"[+] Loading {so_file}...")
+
+try:
+    spec = importlib.util.spec_from_file_location("SASA", os.path.join(os.getcwd(), so_file))
+    SASA = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(SASA)
+    
+    # Ab SASA ke andar function chalao
+    if hasattr(SASA, 'main'):
+        SASA.main()
+    elif hasattr(SASA, 'start'):
         SASA.start()
-    except:
-        try:
-            SASA.run()
-        except:
-            print("SASA load ho gaya lekin function ka naam main/start/run me se nahi hai")
+    elif hasattr(SASA, 'run'):
+        SASA.run()
+    else:
+        print("[+] SASA loaded, lekin main() function nahi mila")
+        # kuch .so direct run hote hain
+        print(dir(SASA))
 
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"[!] Load Error: {e}")
+    import traceback
+    traceback.print_exc()
