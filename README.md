@@ -12,13 +12,6 @@ pip install futures
 pip install mechanize
 pip install rich``
 
-
-``rm -rf Mafiaa
-cd
-git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa
-cd Mafiaa
-python Mafia.py``
-
 #🚀 ONE CLICK PAR COPY KARDO
 
 ``rm -rf Mafiaa && git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa && cd Mafiaa && python Mafia.py``
