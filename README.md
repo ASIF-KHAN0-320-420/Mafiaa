@@ -10,9 +10,7 @@ pip install requests
 pip install bs4
 pip install futures
 pip install mechanize
-
-
-🤖💯✅ working tool
+pip install rich
 
 
 rm -rf Mafiaa
@@ -20,3 +18,7 @@ cd
 git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa
 cd Mafiaa
 python Mafia.py
+
+🚀 ONE CLICK PAR COPY KARDO
+
+rm -rf Mafiaa && git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa && cd Mafiaa && python Mafia.py
