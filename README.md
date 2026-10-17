@@ -15,7 +15,7 @@ pip install mechanize
 
 
 
-```bash
+```
 bash
 cd
 rm -rf Mafiaa
