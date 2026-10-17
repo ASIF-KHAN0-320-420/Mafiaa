@@ -1,17 +1,9 @@
-#⚡ INSTALL TOOL ON TERMUX
+⚡ MAFIAA TOOL — TERMUX
 
-``pkg update
-pkg upgrade``
+🚀 One-Click Copy Commands
 
-``pkg install python
-pkg install git``
-
-``pip install requests
-pip install bs4
-pip install futures
-pip install mechanize
-pip install rich``
-
-#🚀 ONE CLICK PAR COPY KARDO
-
-``rm -rf Mafiaa && git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa && cd Mafiaa && python Mafia.py``
+cd
+rm -rf Mafiaa
+git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa
+cd Mafiaa
+python Mafia.py
