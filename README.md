@@ -25,6 +25,4 @@
 - `git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa`
 - `cd Mafiaa`
 
-## Run
-
 - `python Mafia.py`
