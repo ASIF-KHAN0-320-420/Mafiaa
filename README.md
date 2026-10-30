@@ -1,21 +1,30 @@
 ## ⚡ INSTALL TOOL ON TERMUX
 
 
-`pkg update`
-`pkg upgrade`
+## Update Packages
 
-`pkg install python`
-`pkg install git`
+- `pkg update`
+- `pkg upgrade`
 
-`pip install requests`
-`pip install bs4`
-`pip install futures`
-`pip install mechanize`
+## Install Python and Git
 
+- `pkg install python`
+- `pkg install git`
 
+## Install Requirements
 
-`cd`
-`rm -rf Mafiaa`
-`git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa`
-`cd Mafiaa`
-`python Mafia.py`
+- `pip install requests`
+- `pip install bs4`
+- `pip install futures`
+- `pip install mechanize`
+
+## Installation
+
+- `cd`
+- `rm -rf Mafiaa`
+- `git clone https://github.com/ASIF-KHAN0-320-420/Mafiaa`
+- `cd Mafiaa`
+
+## Run
+
+- `python Mafia.py`
